@@ -12,6 +12,13 @@ import { EntrepriseComponent } from './entreprise/entreprise.component';
 import { ParticulierComponent } from './particulier/particulier.component';
 import { AcademyComponent } from './academy/academy.component';
 import { ContactComponent } from './contact/contact.component';
+import { InfoComponent } from './info/info.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
+import { CompetencesTechniquesComponent } from './competences-techniques/competences-techniques.component';
+import { CompetencesFonctionnellesComponent } from './competences-fonctionnelles/competences-fonctionnelles.component';
+import { ExperiencesProComponent } from './experiences-pro/experiences-pro.component';
+import { FormationsComponent } from './formations/formations.component';
+import { LanguesComponent } from './langues/langues.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,14 @@ import { ContactComponent } from './contact/contact.component';
     EntrepriseComponent,
     ParticulierComponent,
     AcademyComponent,
-    ContactComponent
+    ContactComponent,
+    InfoComponent,
+    ExperiencesComponent,
+    CompetencesTechniquesComponent,
+    CompetencesFonctionnellesComponent,
+    ExperiencesProComponent,
+    FormationsComponent,
+    LanguesComponent
   ],
   imports: [
     BrowserModule,
