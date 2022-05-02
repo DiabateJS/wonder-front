@@ -8,21 +8,36 @@
 </div>
 
 <div class="box">
-    <span>(i)</span>
-    <p class="titre">Informations générales</p>
-    Titre du dossier de compétences
-    <input type="text" value="Dossier Compétence Avril 2022" />
-    Poste occupé
-    <input type="text" value="Développeur FullStack Java / Angular & ReactJS" />
-    <br>
-    Nombre d'années d'expérience
-    <input type="text" value="9" />
-    Disponibilité
-    <input type="text" value="24/04/2022" />
+    <div class="box-title-group">
+        <span><i style="color: orange;" class="fa fa-info-circle" aria-hidden="true"></i></span>
+        <p class="titre">Informations générales</p>
+    </div>
+    <div class="field-row">
+        <div class="field-group">
+            <label>Titre du dossier de compétences</label>
+            <input type="text" value="Dossier Compétence Avril 2022" />
+        </div>
+        <div class="field-group">
+            <label>Poste occupé</label>
+            <input type="text" value="Développeur FullStack Java / Angular & ReactJS" />
+        </div>
+    </div>
+    <div class="field-row">
+        <div class="field-group">
+            <label>Nombre d'années d'expérience</label>
+            <input type="text" value="9" />
+        </div>
+        <div class="field-group">
+            <label>Disponibilité</label>
+            <input type="text" value="24/04/2022" />
+        </div>
+    </div>
 </div>
 <div class="box">
-    () 
-    <p class="titre">Introduction</p>
+    <div class="box-title-group">
+        <span><i style="color: blue;" class="fa fa-user-circle" aria-hidden="true"></i></span>
+        <p class="titre">Introduction</p>
+    </div>
     <textarea>
         Passionné de technologies,  je suis Développeur FullStack avec 9 ans d'expérience.
         Je suis persévérant et n'hésite pas à m'investir dans les missions. 
@@ -31,42 +46,198 @@
     </textarea>
 </div>
 <div class="box">
-    <p class="titre">
-        Expériences significatives
-    </p>
-    <button>AJOUTER UNE EXPERIENCE SIGNIFICATIVE</button>
+    <div class="box-first-row">
+        <div class="box-title-group">
+            <span><i style="color: blueviolet;" class="fa fa-cogs" aria-hidden="true"></i></span>
+            <p class="titre">Expériences significatives</p>
+        </div>
+        <span>AJOUTER UNE EXPERIENCE SIGNIFICATIVE</span>
+    </div>
+    <div class="exp-details-container">
+        <div class="exp-detail-row">
+            <div class="client-field-group">
+                <label>Client / Entreprise</label>
+                <input type="text" value="GMF / Groupe Covéa" />
+            </div>
+            <div class="description-field-group">
+                <label>Description</label>
+                <input type="text" value="Développeur FullStack Java / Angular" />
+            </div>
+            <span>SUPPRIMER</span>
+        </div>
+        <div class="exp-detail-row">
+            <div class="client-field-group">
+                <label>Client / Entreprise</label>
+                <input type="text" value="Banque de France" />
+            </div>
+            <div class="description-field-group">
+                <label>Description</label>
+                <input type="text" value="Développeur FullStack Java / AngularJS & Angular" />
+            </div>
+            <span>SUPPRIMER</span>
+        </div>
+    </div>
 </div>
 <div class="box">
-    <p class="titre">
-       Compétences techniques
-    </p>
-    <button>AJOUTER DES COMPETENCES TECHNIQUES</button>
+    <div class="box-first-row">
+        <div class="box-title-group">
+            <span><i style="color: orange;" class="fa fa-wrench" aria-hidden="true"></i></span>
+            <p class="titre">Compétences techniques</p>
+        </div>
+        <span>AJOUTER DES COMPETENCES TECHNIQUES</span>
+    </div>
 </div>
 <div class="box">
-    <p class="titre">
-       Compétences fonctionnelles
-    </p>
-    <button>AJOUTER UNE COMPETENCE FONCTIONNELLE</button>
+    <div class="box-first-row">
+        <div class="box-title-group">
+            <span><i style="color: orange;" class="fa fa-tasks" aria-hidden="true"></i></span>
+            <p class="titre">Compétences fonctionnelles</p>
+        </div>
+        <span>AJOUTER UNE COMPETENCE FONCTIONNELLE</span>
+    </div>
 </div>
 <div class="box">
-    <p class="titre">
-       Expériences professionnelles
-    </p>
-    <button>AJOUTER UNE EXPERIENCE PROFESSIONNELLE</button>
-    <button>TRIER DE LA PLUS RECENTE A LA PLUS ANCIENNE</button>
+    <div class="box-first-row">
+        <div class="box-title-group">
+            <span><i style="color: orange;" class="fa fa-wrench" aria-hidden="true"></i></span>
+            <p class="titre">Expériences professionnelles</p>
+        </div>
+        <span>AJOUTER UNE EXPERIENCE PROFESSIONNELLE</span>
+        <button>TRIER DE LA PLUS RECENTE A LA PLUS ANCIENNE</button>
+    </div>
+    <div class="pro-details-container">
+        <div class="pro-detail-row">
+            <div class="pro-client-field-group">
+                <label>Client / Entreprise</label>
+                <input type="text" value="GMF / Groupe Covéa" />
+            </div>
+            <div class="pro-description-field-group">
+                <label>Description</label>
+                <input type="text" value="Développeur FullStack Java / Angular" />
+            </div>
+            <div class="pro-vile-field-group">
+                <label>Ville (Pays)</label>
+                <input type="text" value="Levallois Perret" />
+            </div>
+            <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDITER</button>
+            <span>SUPPRIMER</span>
+        </div>
+        <div class="pro-detail-row">
+            <div class="pro-client-field-group">
+                <label>Client / Entreprise</label>
+                <input type="text" value="Banque de France" />
+            </div>
+            <div class="pro-description-field-group">
+                <label>Description</label>
+                <input type="text" value="Développeur FullStack Java / AngularJS & Angular" />
+            </div>
+            <div class="pro-vile-field-group">
+                <label>Ville (Pays)</label>
+                <input type="text" value="Paris" />
+            </div>
+            <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDITER</button>
+            <span>SUPPRIMER</span>
+        </div>
+    </div>
 </div>
 <div class="box">
-    <p class="titre">
-       Formations
-    </p>
-    Diplômes obtenus
-    <button>AJOUTER UN DIPLOME</button>
-    Formation complémentaires / Certificatins 
-    <button>AJOUTER UNE FORMATION COMPLEMENTAIRE</button>
+    <div class="box-first-row">
+        <div class="box-title-group">
+            <span><i style="color: green;" class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+            <p class="titre">Formations</p>
+        </div>
+    </div>
+    <div class="box-second-row">
+        <span>Diplômes obtenus</span>
+        <button>AJOUTER UN DIPLOME</button>
+    </div>
+    <div class="diplomes-container">
+        <div class="diplome-row">
+            <div class="diplome-organisme-field-group">
+                <label>Organisme</label>
+                <input type="text" value="INP-HB" />
+            </div>
+            <div class="diplome-annee-field-group">
+                <label>Année d'obtention</label>
+                <input type="text" value="2012" />
+            </div>
+            <div class="diplome-description-field-group">
+                <label>Description</label>
+                <input type="text" value="Ingénieur de Conception en informatique option génie logiciel" />
+            </div>
+            <span>SUPPRIMER</span>
+        </div>
+        <div class="diplome-row">
+            <div class="diplome-organisme-field-group">
+                <label>Organisme</label>
+                <input type="text" value="Lycée Scientifique" />
+            </div>
+            <div class="diplome-annee-field-group">
+                <label>Année d'obtention</label>
+                <input type="text" value="2007" />
+            </div>
+            <div class="diplome-description-field-group">
+                <label>Description</label>
+                <input type="text" value="Baccalauréat Série Scientifique" />
+            </div>
+            <span>SUPPRIMER</span>
+        </div>
+    </div>
+    <div class="box-second-row">
+        <span>Formation complémentaires / Certifications</span>
+        <button>AJOUTER UNE FORMATION</button>
+    </div>
 </div>
 <div class="box">
-    <p class="titre">
-       Langues
-    </p>
-    <button>AJOUTER UNE LANGUE</button>
+    <div class="box-first-row">
+        <div class="box-title-group">
+            <span><i style="color: blue;" class="fa fa-globe" aria-hidden="true"></i></span>
+            <p class="titre">Langues</p>
+        </div>
+        <span>AJOUTER UNE LANGUE</span>
+    </div>
+    <div class="langues-container">
+        <div class="langue-row">
+            <div class="langue-field-group">
+                <label>Langue</label>
+                <input type="text" value="Anglais" />
+            </div>
+            <div class="langue-niveau-field-group">
+                <div class="option-group">
+                    <input type="radio" value="Debutant" name="debutant" />
+                    <label form="debutant">Débutant</label>
+                </div>
+                <div class="option-group">
+                    <input type="radio" value="Professionnel" name="professionnel" checked/>
+                    <label form="professionnel">Professionnel</label>
+                </div>
+                <div class="option-group">
+                    <input type="radio" value="Courant" name="courant" />
+                    <label form="courant">Courant</label>
+                </div>
+            </div>
+            <span>SUPPRIMER</span>
+        </div>
+        <div class="langue-row">
+            <div class="langue-field-group">
+                <label>Langue</label>
+                <input type="text" value="Francais" />
+            </div>
+            <div class="langue-niveau-field-group">
+                <div class="option-group">
+                    <input type="radio" value="Debutant" name="debutant" />
+                    <label form="debutant">Débutant</label>
+                </div>
+                <div class="option-group">
+                    <input type="radio" value="Professionnel" name="professionnel" />
+                    <label form="professionnel">Professionnel</label>
+                </div>
+                <div class="option-group">
+                    <input type="radio" value="Courant" name="courant" checked/>
+                    <label form="courant">Courant</label>
+                </div>
+            </div>
+            <span>SUPPRIMER</span>
+        </div>
+    </div>
 </div>
