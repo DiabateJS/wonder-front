@@ -1,4 +1,4 @@
-<p class="titre-dossier">Dossier de compétences de Jean DIABATE</p>
+<p class="titre-dossier">Dossier de compétences de {{ cv.name }}</p>
 <br>
 <br>
 <div class="btn-container">
@@ -6,10 +6,10 @@
     <button>TELECHARGER PDF</button>
     <button>Visualiser le rendu</button>
 </div>
-<app-info></app-info>
-<app-experiences></app-experiences>
+<app-info [info]="cv"></app-info>
+<app-experiences [experiences]="experiences"></app-experiences>
 <app-competences-techniques></app-competences-techniques>
 <app-competences-fonctionnelles></app-competences-fonctionnelles>
-<app-experiences-pro></app-experiences-pro>
-<app-formations></app-formations>
-<app-langues></app-langues>
+<app-experiences-pro [experiences]="experiences"></app-experiences-pro>
+<app-formations [formations]="formations"></app-formations>
+<app-langues [langues]="langues"></app-langues>

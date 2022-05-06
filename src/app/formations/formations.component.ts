@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Formation } from '../models/formation';
 
 @Component({
   selector: 'app-formations',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormationsComponent implements OnInit {
 
+  @Input() formations: Array<Formation> = [];
   constructor() { }
 
   ngOnInit(): void {

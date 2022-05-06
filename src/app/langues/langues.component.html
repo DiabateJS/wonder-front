@@ -7,43 +7,22 @@
         <span>AJOUTER UNE LANGUE</span>
     </div>
     <div class="langues-container">
-        <div class="langue-row">
+        <div class="langue-row" *ngFor="let langue of langues">
             <div class="langue-field-group">
                 <label>Langue</label>
-                <input type="text" value="Anglais" />
+                <input type="text" value="{{ langue.libelle }}" />
             </div>
             <div class="langue-niveau-field-group">
                 <div class="option-group">
-                    <input type="radio" value="Debutant" name="debutant" />
+                    <input type="radio" value="Debutant" name="debutant" [checked]="langue.niveau == 'debutant'" />
                     <label form="debutant">Débutant</label>
                 </div>
                 <div class="option-group">
-                    <input type="radio" value="Professionnel" name="professionnel" checked/>
+                    <input type="radio" value="Professionnel" name="professionnel" [checked]="langue.niveau == 'professionnel'"/>
                     <label form="professionnel">Professionnel</label>
                 </div>
                 <div class="option-group">
-                    <input type="radio" value="Courant" name="courant" />
-                    <label form="courant">Courant</label>
-                </div>
-            </div>
-            <span>SUPPRIMER</span>
-        </div>
-        <div class="langue-row">
-            <div class="langue-field-group">
-                <label>Langue</label>
-                <input type="text" value="Francais" />
-            </div>
-            <div class="langue-niveau-field-group">
-                <div class="option-group">
-                    <input type="radio" value="Debutant" name="debutant" />
-                    <label form="debutant">Débutant</label>
-                </div>
-                <div class="option-group">
-                    <input type="radio" value="Professionnel" name="professionnel" />
-                    <label form="professionnel">Professionnel</label>
-                </div>
-                <div class="option-group">
-                    <input type="radio" value="Courant" name="courant" checked/>
+                    <input type="radio" value="Courant" name="courant" [checked]="langue.niveau == 'courant'"/>
                     <label form="courant">Courant</label>
                 </div>
             </div>

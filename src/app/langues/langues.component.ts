@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Langue } from '../models/langue';
 
 @Component({
   selector: 'app-langues',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./langues.component.css']
 })
 export class LanguesComponent implements OnInit {
-
+  @Input() langues: Array<Langue> = [];
   constructor() { }
 
   ngOnInit(): void {

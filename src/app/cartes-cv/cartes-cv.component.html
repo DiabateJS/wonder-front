@@ -1,0 +1,19 @@
+<div class="carte-cv-container">
+	<div class="card-container" *ngFor="let cv of cvs">
+		<img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+		<h3>{{ cv.name }}</h3>
+		<h6>{{ cv.poste }}</h6>
+		<p>{{ cv.annee }} ans d'expériences</p>
+		<div class="buttons">
+			<button class="primary">
+				Afficher
+			</button>
+		</div>
+		<div class="skills">
+			<h6>Langages</h6>
+			<ul>
+				<li *ngFor="let language of languages">{{ language }}</li>
+			</ul>
+		</div>
+	</div>
+</div>

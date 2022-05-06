@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,8 @@ import { CompetencesFonctionnellesComponent } from './competences-fonctionnelles
 import { ExperiencesProComponent } from './experiences-pro/experiences-pro.component';
 import { FormationsComponent } from './formations/formations.component';
 import { LanguesComponent } from './langues/langues.component';
+import { CartesCvComponent } from './cartes-cv/cartes-cv.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,11 +41,14 @@ import { LanguesComponent } from './langues/langues.component';
     CompetencesFonctionnellesComponent,
     ExperiencesProComponent,
     FormationsComponent,
-    LanguesComponent
+    LanguesComponent,
+    CartesCvComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
