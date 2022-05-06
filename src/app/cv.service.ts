@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Competence } from './models/competence';
+import { ReferenceCompetences } from './models/reference-competences';
 import { Response } from './models/response';
 
 @Injectable({
@@ -36,4 +38,10 @@ export class CvService {
     const url = this.url_base + "url=cvs/"+idCv+"/langues/";
     return this.http.get<Response>(url);
   }
+
+  getReferenceCompetences(): Observable<Response> {
+    const url = this.url_base + "url=competences/";
+    return this.http.get<Response>(url);
+  }
+
 }
