@@ -1,5 +1,6 @@
 import { AstPath } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
+import { Langage } from '../models/langage';
 
 @Component({
   selector: 'app-competences-techniques',

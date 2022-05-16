@@ -22,6 +22,7 @@ import { FormationsComponent } from './formations/formations.component';
 import { LanguesComponent } from './langues/langues.component';
 import { CartesCvComponent } from './cartes-cv/cartes-cv.component';
 import { FormsModule } from '@angular/forms';
+import { CvTechIntroComponent } from './cv-tech-intro/cv-tech-intro.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     ExperiencesProComponent,
     FormationsComponent,
     LanguesComponent,
-    CartesCvComponent
+    CartesCvComponent,
+    CvTechIntroComponent
   ],
   imports: [
     BrowserModule,

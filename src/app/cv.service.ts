@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Competence } from './models/competence';
+import { CvResponse } from './models/cvresponse';
 import { ReferenceCompetences } from './models/reference-competences';
 import { Response } from './models/response';
 
@@ -19,9 +20,9 @@ export class CvService {
     return this.http.get<Response>(url);
   }
 
-  getCvById(id: string): Observable<Response> {
+  getCvById(id: string): Observable<CvResponse> {
     const url = this.url_base+"url=cvs/"+id;
-    return this.http.get<Response>(url);
+    return this.http.get<CvResponse>(url);
   }
 
   getCvExperiences(idCv: string): Observable<Response> {

@@ -1,3 +1,5 @@
+import { Langage } from "./langage";
+
 export interface Cv {
     id: string;
     titre: string;
@@ -7,4 +9,5 @@ export interface Cv {
     intro: string;
     userid: string;
     name: string;
+    langages: Array<Langage>;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CvService } from '../cv.service';
-import { Competence } from '../models/competence';
 import { CompetenceFonctionnel } from '../models/competence-fonctionnel';
 import { Constants } from '../models/constants';
 import { Cv } from '../models/cv';
@@ -36,29 +36,37 @@ export class CvTechComponent implements OnInit {
   devops: Array<string> = [];
   selectedDevops: Array<string> = [];
 
-  constructor(private cvService: CvService, private utilService: UtilService) { }
+  idCv: string = "";
+
+  constructor(private cvService: CvService, private utilService: UtilService,
+              private route: ActivatedRoute) {
+                this.route.params.subscribe(params => {
+                  this.idCv = params["id"];
+                }); 
+
+  }
 
   ngOnInit(): void {
-    const idCv = "1";
-    this.cvService.getCvById(idCv).subscribe(data => {
-      if (data.code === Constants.SUCCES_CODE){
-        this.cv = <Cv>data.resultat[0];
+    this.cvService.getCvById(this.idCv).subscribe(res => {
+      if (res.code === Constants.SUCCES_CODE){
+        this.cv = <Cv>res.resultat.data[0];
+        this.selectedLanguages = this.utilService.LangagesToArray(this.cv.langages);
       }
     });
 
-    this.cvService.getCvExperiences(idCv).subscribe(data => {
+    this.cvService.getCvExperiences(this.idCv).subscribe(data => {
       if (data.code === Constants.SUCCES_CODE){
         this.experiences = <Array<Experience>>data.resultat;
       }
     });
 
-    this.cvService.getCvFormations(idCv).subscribe(data => {
+    this.cvService.getCvFormations(this.idCv).subscribe(data => {
       if (data.code === Constants.SUCCES_CODE){
         this.formations = <Array<Formation>>data.resultat;
       }
     });
 
-    this.cvService.getCvLangues(idCv).subscribe(data => {
+    this.cvService.getCvLangues(this.idCv).subscribe(data => {
       if (data.code === Constants.SUCCES_CODE){
         this.langues = <Array<Langue>>data.resultat;
       }
@@ -81,8 +89,6 @@ export class CvTechComponent implements OnInit {
       {id:"1",titre:"Titre 1",description:"Description 1"},
       {id:"2", titre:"Titre 2",description:"Description 2"}
     ];
-
-    this.selectedLanguages = ["JAVA", "JAVASCRIPT", "HTML5", "PYTHON", "PHP", "SQL", "TypeScript", "CSS"];
 
     this.selectedFrameworks = ["ANGULAR", "ANGULARJS", "JPA", "HIBERNATE", "J2EE", "NODE.JS",
                         "REACT.JS", "REST", "SPRING", "SPRING BOOT", "TWITTER BOOTSTRAP"];

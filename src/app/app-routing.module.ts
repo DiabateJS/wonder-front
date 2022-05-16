@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AcademyComponent } from './academy/academy.component';
 import { CartesCvComponent } from './cartes-cv/cartes-cv.component';
 import { ContactComponent } from './contact/contact.component';
+import { CvTechIntroComponent } from './cv-tech-intro/cv-tech-intro.component';
 import { CvTechComponent } from './cv-tech/cv-tech.component';
 import { EntrepriseComponent } from './entreprise/entreprise.component';
 import { HomeComponent } from './home/home.component';
@@ -12,7 +13,9 @@ import { ParticulierComponent } from './particulier/particulier.component';
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'home', component: HomeComponent},
+  {path:'cv-tech', component: CvTechIntroComponent},
   {path:'cv-tech/cv', component: CvTechComponent},
+  {path:'cv-tech/cv/:id', component: CvTechComponent},
   {path:'cv-tech/cvs', component: CartesCvComponent},
   {path:'a-propos', component: AboutUsComponent},
   {path:'entreprise', component: EntrepriseComponent},

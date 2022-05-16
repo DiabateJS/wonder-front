@@ -1,3 +1,57 @@
+.search-container {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	background-color: white;
+	padding: 15px;
+}
+
+.search-title-row {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.search-field-row {
+	margin-top: 10px;
+}
+
+.search-field-row input {
+	margin-right: 20px;
+	margin-left: 20px;
+	width: 800px;
+	border-radius: 15px;
+}
+
+.search-field-row button {
+	width: 200px;
+}
+
+.search-filtre-title-row {
+	margin-top: 10px;
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.search-filtre-chechbox-row {
+	display: flex;
+	margin-left: 20px;
+	margin-top: 15px;
+}
+
+.search-filtre-checkbox {
+	margin-right: 25px;
+}
+
+.search-filtre-checkbox input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
 .carte-cv-container {
     width: 1200px;
     background-color: white;
